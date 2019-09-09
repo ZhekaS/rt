@@ -1,0 +1,10 @@
+[target.thumbv7em-none-eabihf]
+rustflags = ["-C", "link-arg=-Tlink.x",
+             "-C", "link-arg=-Map=link.map"]
+runner = "C:/GNU_MCU_Eclipse/QEMU/2.8.0-6-20190517-1329/bin/qemu-system-gnuarmeclipse.exe -cpu cortex-m4 -machine STM32F4-Discovery -nographic -S -gdb tcp::3333 -semihosting-config enable=on,target=native -kernel"
+linker = "C:/Arm gcc/gcc-arm-none-eabi-8-2019-q3-update-win32/bin/arm-none-eabi-ld.exe"
+
+
+[build]
+target = "thumbv7em-none-eabihf"
+
